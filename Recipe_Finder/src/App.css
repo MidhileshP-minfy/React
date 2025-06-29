@@ -1,0 +1,64 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  display:block;
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.Search-bar {
+  margin-bottom: 20px;
+}
+
+.Search-bar input {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+.Search-bar button {
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#lists{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.Recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  background-color: hsla(225, 15%, 31%, 0.379);
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.Recipe-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.Recipe-card:hover {
+  box-shadow: 0 0 10px rgba(17, 185, 8, 0.696);
+}
