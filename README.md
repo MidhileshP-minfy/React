@@ -51,14 +51,20 @@ Open your browser and visit [http://localhost:3000](http://localhost:3000)
 
 ## Screenshots
 
-### 🔍 Search Page
+### Search Page
 
-<!-- Upload screenshot here -->
+![Screenshot 2025-06-30 143801](https://github.com/user-attachments/assets/cf9fa678-3e41-42f8-b6ee-028bcf8a38bb)
 
-### 📋 Recipe Detail Page
 
-<!-- Upload screenshot here -->
+![Screenshot 2025-06-30 112848](https://github.com/user-attachments/assets/10cb89f6-a76a-4e59-8555-272275665723)
 
+### Recipe Detail Page
+
+![Screenshot 2025-06-26 150040](https://github.com/user-attachments/assets/5b49b65b-6040-4153-9368-ffa1fc9292cd)
+
+![Screenshot 2025-06-26 150055](https://github.com/user-attachments/assets/adae0395-f332-499e-9444-cb029fc53c95)
+
+![Screenshot 2025-06-26 150107](https://github.com/user-attachments/assets/d1142459-2e32-4f5c-a136-86c3d00ffad4)
 
 ## Project Structure
 
@@ -75,9 +81,9 @@ src/
 
 ---
 
-# 🔐 Secret Quote API (JWT Authentication)
+# Secret Quote API (JWT Authentication)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 
@@ -94,7 +100,7 @@ src/
 ````
 
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 - Node.js
 - Express.js
@@ -102,39 +108,28 @@ src/
 - dotenv (for managing environment variables)
 
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/secret-quote-api.git
-cd secret-quote-api
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Environment Setup
+### 2. Environment Setup
 
-Create a `.env` file in the root of your project with the following line:
+Create a `.env` file
 
 ```
 JWT_SECRET=your_jwt_secret_key
 ```
 
-> Replace `your_jwt_secret_key` with any random secret string you want.
 
-### 4. Start the Server
+### 3. Start the Server
 
 ```bash
-npm start
+npm start / bun start
 ```
-
-By default, it runs at: [http://localhost:3000](http://localhost:3000)
-
 
 ## 🔑 API Endpoints
 
@@ -142,43 +137,15 @@ Used **Postman**
 
 ### ✅ `POST /register`
 
-Registers a new user (in-memory storage only, no password hashing).
 
-**Request Body:**
-
-```json
-{
-  "username": "testuser",
-  "password": "password123"
-}
-```
+![Screenshot 2025-06-29 210731](https://github.com/user-attachments/assets/a566168a-0c1e-4c71-958a-ce403b61439e)
 
 
 ### 🔓 `POST /login`
 
-Logs in a user and returns a JWT token (valid for 1 hour).
-
-**Request Body:**
-
-```json
-{
-  "username": "testuser",
-  "password": "password123"
-}
-```
-
-**Response:**
-
-```json
-{
-  "accessToken": "<JWT_TOKEN>"
-}
-```
-
+![Screenshot 2025-06-29 211301](https://github.com/user-attachments/assets/b033f8c7-ce07-44dd-9be7-e62b47743de8)
 
 ### 🔐 `GET /api/secret-quote`
-
-A protected route that requires a valid JWT token.
 
 **Headers:**
 
@@ -186,31 +153,13 @@ A protected route that requires a valid JWT token.
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-**Response:**
+![Screenshot 2025-06-29 211450](https://github.com/user-attachments/assets/0a324043-cd57-43cd-b109-bdab8e7303e3)
 
-```json
-{
-  "quote": "The secret to getting ahead is getting started."
-}
-```
-
-
-## 🧪 Testing the API
-
-1. **Register a user** via `/register`.
-2. **Login** via `/login` to receive a token.
-3. **Access** `/api/secret-quote` using the `Authorization` header.
-
-Example using `curl`:
-
-```bash
-curl -H "Authorization: Bearer <your_token>" http://localhost:3000/api/secret-quote
-```
 ---
 
-# 📝 User-Specific To-Do List API (JWT + bcrypt + Express)
+# User-Specific To-Do List API (JWT + bcrypt + Express)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -232,7 +181,7 @@ curl -H "Authorization: Bearer <your_token>" http://localhost:3000/api/secret-qu
 ```
 
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 - Node.js
 - Express.js
@@ -241,22 +190,15 @@ curl -H "Authorization: Bearer <your_token>" http://localhost:3000/api/secret-qu
 - dotenv (for environment variables)
 
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/user-todo-api.git
-cd user-todo-api
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 
 ```bash
 npm install / bun install
 ```
 
-### 3. Create `.env` File
+### 2. Create `.env` File
 
 Create a `.env` file in the root folder and add:
 
@@ -264,24 +206,19 @@ Create a `.env` file in the root folder and add:
 JWT_SECRET=your_jwt_secret_key
 ```
 
-> Replace `your_jwt_secret_key` with any secure string.
-
-### 4. Start the Server
+### 3. Start the Server
 
 ```bash
 npm start / bun start
 ```
 
-> Server runs at [http://localhost:3000](http://localhost:3000)
-
-
-## 🔐 Authentication
+## Authentication
 
 * JWT tokens are issued during login and are required for accessing all `/api/todos` routes.
 * Passwords are hashed using bcrypt before storing in the in-memory array.
 
 
-## 🧪 Testing the Endpoints
+## Testing the Endpoints
 
 Used **Postman**.
 
@@ -289,77 +226,33 @@ Used **Postman**.
 
 **Register a new user (password is hashed).**
 
-**Body:**
+![Screenshot 2025-06-29 212320](https://github.com/user-attachments/assets/fcf82056-07fc-4a85-8eb6-1b2449363de9)
 
-```json
-{
-  "username": "user1",
-  "password": "pass123"
-}
-```
-
-### 🔓 `POST /login`
-
-**Returns a JWT token upon successful login.**
-
-**Body:**
-
-```json
-{
-  "username": "user1",
-  "password": "pass123"
-}
-```
-
-**Response:**
-
-```json
-{
-  "accessToken": "<JWT_TOKEN>"
-}
-```
+![Screenshot 2025-06-29 212358](https://github.com/user-attachments/assets/b739353a-43ed-45af-bb71-4e22fe42df23)
 
 
-### 📋 `GET /api/todos`
+### `POST /login`
 
-**Returns all to-dos for the authenticated user.**
+![Screenshot 2025-06-29 212501](https://github.com/user-attachments/assets/3366a8d4-7230-4dd6-a922-3fa5fea322e6)
 
-**Headers:**
+### `POST /api/todos`
 
-```
-Authorization: Bearer <JWT_TOKEN>
-```
+![Screenshot 2025-06-29 212709](https://github.com/user-attachments/assets/098932d8-ba0c-4bbd-a418-f97ede77c488)
 
 
-### ➕ `POST /api/todos`
+### `GET /api/todos`
 
-**Creates a to-do for the logged-in user.**
-
-**Body:**
-
-```json
-{
-  "task": "Finish the assignment"
-}
-```
-
-### ❌ `DELETE /api/todos/:id`
-
-**Deletes a to-do only if it belongs to the current user.**
+![Screenshot 2025-06-29 212856](https://github.com/user-attachments/assets/588db583-cdda-4d30-b39a-9df639193939)
 
 
-## Bonus: Admin Access
+### `DELETE /api/todos/:id`
 
-### Role-Based Authorization
+![Screenshot 2025-06-29 213853](https://github.com/user-attachments/assets/370eeef9-1141-40de-a3d7-88a31a423c87)
 
-You can manually set a user’s `role` to `"admin"` in the `users.js` array.
 
-### 🗃️ `GET /api/admin/all-todos`
+### `GET /api/admin/all-todos`
 
-**Admin-only endpoint to view all users' to-dos.**
+![Screenshot 2025-06-29 213910](https://github.com/user-attachments/assets/f0d39fb9-3cf7-4f52-88f2-cc764b87e502)
 
-**Headers:**
-
-```
-Authorization: Bearer <ADMIN_JWT_TOKEN>
-```
+*   If **Not Admin**:
+    ![Screenshot 2025-06-29 213242](https://github.com/user-attachments/assets/1e71e3ee-2979-4366-a65b-a0a8a4255256)
